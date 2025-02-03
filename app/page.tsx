@@ -156,10 +156,11 @@ export default function Home() {
   const [activeView, setActiveView] = useState<"none" | "conference" | "sideEvent">("none")
 
   return (
+
     <main
-      className="h-[3840px] w-[2160px] bg-cover bg-center relative overflow-hidden"
+      className="min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: `url('/programmes/bg-home.jpg')`,
+        backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Arrire%2001.jpg-j11gXZ0xVu5i2SG4t3DMCdLNWLSBUJ.jpeg)`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
