@@ -159,14 +159,14 @@ export default function Home() {
     <main
       className="h-[3840px] w-[2160px] bg-cover bg-center relative overflow-hidden"
       style={{
-        backgroundImage: `url('/bg-home.jpg')`,
+        backgroundImage: `url('/programmes/bg-home.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
       <div className="relative z-10 flex flex-col items-center h-full">
         {/* Header */}
         <header className="w-full text-center pt-16">
-          <Image src="/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
+          <Image src="/programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
         </header>
 
         {/* Main Content - Centered */}
@@ -201,7 +201,7 @@ export default function Home() {
           ) : (
             <div className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto max-h-[2800px] overflow-y-auto"
               style={{
-                backgroundImage: `url('/bg.jpg')`,
+                backgroundImage: `url('/programmes/bg.jpg')`,
               }}
             >
               <Button variant="outline" className="mb-4 text-2xl" onClick={() => setActiveView("none")}>
