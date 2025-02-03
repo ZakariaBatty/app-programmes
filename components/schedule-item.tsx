@@ -28,7 +28,7 @@ export function ScheduleItem({ item }: { item: ScheduleItemType }) {
                   {speaker.pdfUrl ? (
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="link" className="text-[#004258] font-bold p-0 h-auto">
+                        <Button variant="link" className="text-[#004258] font-bold p-0 h-auto pl-2">
                           {speaker.name} ({speaker.organization})
                         </Button>
                       </DialogTrigger>

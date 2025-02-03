@@ -199,7 +199,11 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <div className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto max-h-[2800px] overflow-y-auto">
+            <div className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto max-h-[2800px] overflow-y-auto"
+              style={{
+                backgroundImage: `url('/bg.jpg')`,
+              }}
+            >
               <Button variant="outline" className="mb-4 text-2xl" onClick={() => setActiveView("none")}>
                 ← Retour
               </Button>
