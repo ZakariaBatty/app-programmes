@@ -157,94 +157,72 @@ export default function Home() {
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center"
+      className="h-[3840px] w-[2160px] bg-cover bg-center relative overflow-hidden"
       style={{
         backgroundImage: `url('/bg-home.jpg')`,
       }}
     >
-      <div className="container mx-auto px-4">
+      <div className="absolute inset-0 bg-blue-900/70" />
+      <div className="relative z-10 flex flex-col items-center h-full">
         {/* Header */}
-        <header className="py-8">
-          <Image
-            src="logo-ANDA.svg"
-            alt="ANDA Logo"
-            width={600}
-            height={73}
-            className="mx-auto"
-          />
+        <header className="w-full text-center pt-16">
+          <Image src="/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
         </header>
 
-        {/* Main Content */}
-        {activeView === "none" ? (
-          <div className="flex flex-col items-center gap-8 mt-20">
-            <Button className="w-full max-w-xl h-auto p-0" onClick={() => setActiveView("sideEvent")}>
-              <Image
-                src="/Botton-01.png"
-                alt="Programme Side Event"
-                width={500}
-                height={100}
-                className="w-full"
-              />
-            </Button>
-            <Button className="w-full max-w-xl h-auto p-0" onClick={() => setActiveView("conference")}>
-              <Image
-                src="/Botton-02.png"
-                alt="Programme Conference"
-                width={500}
-                height={100}
-                className="w-full"
-              />
-            </Button>
-          </div>
-        ) : (
-          <div className="bg-white/90 rounded-lg p-8 my-8 max-w-4xl mx-auto"
-            style={{
-              backgroundImage: `url('/bg.jpg')`,
-            }}
-          >
-            <Button variant="outline" className="mb-4" onClick={() => setActiveView("none")}>
-              ← Retour
-            </Button>
-            <header className="py-8">
-              <Image
-                src="bg.jpg"
-                alt="ANDA Logo"
-                width={600}
-                height={73}
-                className="mx-auto"
-              />
-            </header>
-            {(activeView === "sideEvent" ? conferenceData.sideEvent : conferenceData.conference).map((day, index) => (
-              <div key={index} className="mb-8">
-                <h2 className="text-[#004258] text-xl font-bold mb-4">{day.date}</h2>
-                <div className="space-y-0">
-                  {day.items.map((item, itemIndex) => (
-                    <ScheduleItem key={itemIndex} item={item} />
-                  ))}
+        {/* Main Content - Centered */}
+        <div className="flex-1 flex items-center justify-center w-full px-16">
+          {activeView === "none" ? (
+            <div className="flex flex-col items-center gap-16">
+              <button
+                className="w-[800px] h-[150px] transition-transform hover:scale-105"
+                onClick={() => setActiveView("sideEvent")}
+              >
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Botton-01-pbbMG0CZsVusxABbi6Vx36cDVzebar.png"
+                  alt="Programme Side Event"
+                  width={800}
+                  height={150}
+                  className="w-full h-full"
+                />
+              </button>
+              <button
+                className="w-[800px] h-[150px] transition-transform hover:scale-105"
+                onClick={() => setActiveView("conference")}
+              >
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Botton-02-y6Y4GIN7yuDsmXFcSKcFkAMwEDfRqV.png"
+                  alt="Programme Conference"
+                  width={800}
+                  height={150}
+                  className="w-full h-full"
+                />
+              </button>
+            </div>
+          ) : (
+            <div className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto max-h-[2800px] overflow-y-auto">
+              <Button variant="outline" className="mb-4 text-2xl" onClick={() => setActiveView("none")}>
+                ← Retour
+              </Button>
+              {(activeView === "sideEvent" ? conferenceData.sideEvent : conferenceData.conference).map((day, index) => (
+                <div key={index} className="mb-8">
+                  <h2 className="text-[#004258] text-3xl font-bold mb-4">{day.date}</h2>
+                  <div className="space-y-0">
+                    {day.items.map((item, itemIndex) => (
+                      <ScheduleItem key={itemIndex} item={item} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </div>
 
-        {/* Footer */}
-        {/* <footer className="py-8 text-center text-white">
-          <div className="text-2xl mb-4 font-bold">
-            بالاســــــتــــدامــــــة مـلـتــزمــــون
-            <br />
-            ENGAGÉS POUR LA DURABILITÉ
-          </div>
-          <div className="flex justify-center gap-4">
-            <a href="#" className="text-white">
-              ANDA.aquaculture
-            </a>
-            <a href="#" className="text-white">
-              ANDAaqua
-            </a>
-          </div>
-        </footer> */}
+        {/* Space for footer if needed */}
+        <div className="h-16"></div>
+
       </div>
     </main>
   )
 }
+
 
