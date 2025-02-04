@@ -34,7 +34,7 @@ const conferenceData: ConferenceData = {
             {
               "name": "Pierre FAILLER",
               "organization": "BM",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/one.jpg",
               "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
