@@ -34,7 +34,7 @@ const conferenceData: ConferenceData = {
             {
               "name": "Pierre FAILLER",
               "organization": "BM",
-              "pdfUrl": "/programmes/one.jpg",
+              "pdfUrl": "/one.jpg",
               "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
@@ -250,8 +250,8 @@ export default function Home() {
               if (!open) setActiveView("none")
             }}
           >
-            <DialogContent className="max-w-[90vw] max-h-[90vh] w-[2000px] h-[3000px]">
-              <div className="flex flex-col h-full">
+            <DialogContent className="w-auto h-auto max-w-full max-h-full">
+              <div className="relative">
                 <DialogTitle />
                 {/* <div className="flex justify-between">
                   <div></div> */}
@@ -266,13 +266,13 @@ export default function Home() {
                   ← Retour
                 </Button>
                 {/* </div> */}
-                <div className="flex-1 overflow-hidden">
-                  <iframe
-                    src="/programmes/pdfs/Totem-Programme-P3.pdf"
-                    className="w-full h-full"
-                    title="Programme Conference PDF"
-                  />
-                </div>
+                <Image
+                  src="/programmes/confedence.jpg"
+                  alt="test"
+                  width={4000}
+                  height={3000}
+                  className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
+                />
               </div>
             </DialogContent>
           </Dialog>

@@ -9,18 +9,19 @@ export function SpeakerDialog({ speaker }: { speaker: Speaker }) {
 
   return (
 
-    <DialogContent className="max-w-[90vw] max-h-[90vh] w-[2000px] h-[3000px] flex items-center justify-center">
-      <div className="w-full h-full">
+    <DialogContent className="w-auto h-auto max-w-full max-h-full">
+      <div className="relative">
         <DialogTitle />
         <Image
           src={speaker.pdfUrl}
           alt="test"
           width={4000}
           height={3000}
-          className="w-full h-full object-contain"
+          className="w-auto h-auto max-w-full max-h-[90vh] object-contain"
         />
       </div>
     </DialogContent>
+
 
     // <DialogContent className="max-w-[90vw] max-h-[90vh] w-[2000px] h-[3000px]">
     //   <div className=" h-full">
