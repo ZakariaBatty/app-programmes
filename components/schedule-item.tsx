@@ -24,11 +24,12 @@ export function ScheduleItem({ item }: { item: ScheduleItemType }) {
             <ul className="text-gray-800 mt-2 space-y-2">
               {item.speakers.map((speaker, index) => (
                 <li key={index}>
-                  {speaker.title && <span>{speaker.title}</span>}
+                  {/* {speaker.title && <span>{speaker.title}</span>} */}
                   {speaker.pdfUrl ? (
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="link" className="text-[#004258] font-bold p-0 h-auto pl-2">
+                          {speaker.title && <span className="text-gray-800 ">{speaker.title}</span>}
                           {speaker.name} ({speaker.organization})
                         </Button>
                       </DialogTrigger>
