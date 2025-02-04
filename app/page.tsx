@@ -34,19 +34,19 @@ const conferenceData: ConferenceData = {
             {
               "name": "Pierre FAILLER",
               "organization": "BM",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
               "name": "Mourabit Said",
               "organization": "BID",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "La chaine de valeur aquacole, une contribution à la sécurité alimentaire"
             },
             {
               "name": "Siham FELLAHI",
               "organization": "MEF",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "Les clusters côtiers, une voie de développement de l'économie Bleue et de l'aquaculture"
             }
           ]
@@ -101,19 +101,19 @@ const conferenceData: ConferenceData = {
               "name": "Nir Tzohari",
               "organization": "AQUAMANAGER",
               "title": "Aquaculture et innovation, les nouvelles voies de l'aquaculture",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "M. Ralf Klis",
               "organization": "UMITRON",
               "title": "L’intelligence artificielle en aquaculture 'Handson session'",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "SETH COAN",
               "organization": "BARAKA INDUSTRIE",
               "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure",
-              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
             }
           ]
         },
@@ -161,14 +161,14 @@ export default function Home() {
     <main
       className="min-h-screen bg-cover bg-center  relative overflow-hidden"
       style={{
-        backgroundImage: `url('/programmes/bg-home.jpg')`,
+        backgroundImage: `url('//programmes/bg-home.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
       <div className="relative z-10 flex flex-col items-center h-full">
         {/* Header */}
         <header className="w-full text-center pt-16">
-          <Image src="/programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
+          <Image src="//programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
         </header>
 
         {/* Main Content - Centered */}
@@ -207,7 +207,7 @@ export default function Home() {
             <div
               className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto  h-full "
               style={{
-                backgroundImage: `url('/programmes/bg.jpg')`,
+                backgroundImage: `url('//programmes/bg.jpg')`,
               }}
             >
               <div className="flex justify-between">
@@ -268,7 +268,7 @@ export default function Home() {
                 {/* </div> */}
                 <div className="flex-1 overflow-hidden">
                   <iframe
-                    src="/programmes/pdfs/Totem-Programme-P3.pdf"
+                    src="//programmes/pdfs/Totem-Programme-P3.pdf"
                     className="w-full h-full"
                     title="Programme Conference PDF"
                   />
