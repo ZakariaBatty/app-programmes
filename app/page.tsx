@@ -5,6 +5,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ScheduleItem } from "@/components/schedule-item"
 import type { ConferenceData } from "@/types/schedule"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { DialogTitle } from "@radix-ui/react-dialog"
 
 const conferenceData: ConferenceData = {
   sideEvent: [
@@ -32,19 +34,19 @@ const conferenceData: ConferenceData = {
             {
               "name": "Pierre FAILLER",
               "organization": "BM",
-              "pdfUrl": "/pdfs/pierre-failler.pdf",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
               "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
               "name": "Mourabit Said",
               "organization": "BID",
-              "pdfUrl": "/pdfs/mourabit-said.pdf",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
               "title": "La chaine de valeur aquacole, une contribution à la sécurité alimentaire"
             },
             {
               "name": "Siham FELLAHI",
               "organization": "MEF",
-              "pdfUrl": "/pdfs/siham-fellahi.pdf",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
               "title": "Les clusters côtiers, une voie de développement de l'économie Bleue et de l'aquaculture"
             }
           ]
@@ -93,25 +95,25 @@ const conferenceData: ConferenceData = {
           "time": "13h00 - 15h00",
           "type": "SHOWCASE",
           "title": "SHOWCASE :",
-          "description": "Aquaculture et innovation, les nouvelles voies de l'aquaculture",
+          "description": "",
           "speakers": [
             {
               "name": "Nir Tzohari",
               "organization": "AQUAMANAGER",
-              "title": "L’intelligence artificielle en aquaculture 'Handson session'",
-              "pdfUrl": "/pdfs/mourabit-said.pdf",
+              "title": "Aquaculture et innovation, les nouvelles voies de l'aquaculture",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "M. Ralf Klis",
               "organization": "UMITRON",
-              "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure",
-              "pdfUrl": "/pdfs/mourabit-said.pdf",
+              "title": "L’intelligence artificielle en aquaculture 'Handson session'",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "SETH COAN",
               "organization": "BARAKA INDUSTRIE",
-              "title": "",
-              "pdfUrl": "/pdfs/mourabit-said.pdf",
+              "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure",
+              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
             }
           ]
         },
@@ -154,13 +156,12 @@ const conferenceData: ConferenceData = {
 
 export default function Home() {
   const [activeView, setActiveView] = useState<"none" | "conference" | "sideEvent">("none")
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
   return (
-
     <main
-      className="min-h-screen bg-cover bg-center"
+      className="min-h-screen bg-cover bg-center  relative overflow-hidden"
       style={{
-        backgroundImage: `url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Arrire%2001.jpg-j11gXZ0xVu5i2SG4t3DMCdLNWLSBUJ.jpeg)`,
+        backgroundImage: `url('/programmes/bg-home.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
@@ -188,7 +189,10 @@ export default function Home() {
               </button>
               <button
                 className="w-[800px] h-[150px] transition-transform hover:scale-105"
-                onClick={() => setActiveView("conference")}
+                onClick={() => {
+                  setActiveView("conference")
+                  setIsDialogOpen(true)
+                }}
               >
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Botton-02-y6Y4GIN7yuDsmXFcSKcFkAMwEDfRqV.png"
@@ -199,18 +203,35 @@ export default function Home() {
                 />
               </button>
             </div>
-          ) : (
-            <div className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto max-h-[2800px] overflow-y-auto"
+          ) : activeView === "sideEvent" ? (
+            <div
+              className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto  h-full "
               style={{
                 backgroundImage: `url('/programmes/bg.jpg')`,
               }}
             >
-              <Button variant="outline" className="mb-4 text-2xl" onClick={() => setActiveView("none")}>
-                ← Retour
-              </Button>
-              {(activeView === "sideEvent" ? conferenceData.sideEvent : conferenceData.conference).map((day, index) => (
+              <div className="flex justify-between">
+                <div></div>
+                <Button variant="outline" className="mb-4 text-2xl bg-[#0e3d49] text-white p-4" onClick={() => setActiveView("none")}>
+                  ← Retour
+                </Button>
+              </div>
+
+              <div className="text-center py-8 px-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#002A38] uppercase">
+                  Conférence sur l’innovation en aquaculture
+                </h1>
+                <p className="text-xl md:text-2xl text-[#C4A879] font-medium mt-2">
+                  Agadir Du 05 au 08 Février 2025
+                </p>
+                <p className="text-lg md:text-xl font-semibold text-[#002A38] mt-1">
+                  - Pavillon Aquacole Hall E 63 -
+                </p>
+              </div>
+
+              {conferenceData.sideEvent.map((day, index) => (
                 <div key={index} className="mb-8">
-                  <h2 className="text-[#004258] text-3xl font-bold mb-4">{day.date}</h2>
+                  <h2 className="text-white bg-[#0e3d49] p-4 text-3xl font-bold mb-4 text-center">{day.date}</h2>
                   <div className="space-y-0">
                     {day.items.map((item, itemIndex) => (
                       <ScheduleItem key={itemIndex} item={item} />
@@ -219,11 +240,43 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          ) : null}
 
-        {/* Space for footer if needed */}
-        <div className="h-16"></div>
+          {/* Conference PDF Dialog */}
+          <Dialog
+            open={isDialogOpen}
+            onOpenChange={(open) => {
+              setIsDialogOpen(open)
+              if (!open) setActiveView("none")
+            }}
+          >
+            <DialogContent className="max-w-[90vw] max-h-[90vh] w-[2000px] h-[3000px]">
+              <div className="flex flex-col h-full">
+                <DialogTitle />
+                {/* <div className="flex justify-between">
+                  <div></div> */}
+                <Button
+                  variant="outline"
+                  className="mb-4 text-2xl self-start bg-[#0e3d49] text-white p-4"
+                  onClick={() => {
+                    setIsDialogOpen(false)
+                    setActiveView("none")
+                  }}
+                >
+                  ← Retour
+                </Button>
+                {/* </div> */}
+                <div className="flex-1 overflow-hidden">
+                  <iframe
+                    src="/pdfs/Totem-Programme-P3.pdf"
+                    className="w-full h-full"
+                    title="Programme Conference PDF"
+                  />
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
 
       </div>
     </main>
