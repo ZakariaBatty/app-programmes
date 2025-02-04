@@ -161,14 +161,14 @@ export default function Home() {
     <main
       className="min-h-screen bg-cover bg-center  relative overflow-hidden"
       style={{
-        backgroundImage: `url('//programmes/bg-home.jpg')`,
+        backgroundImage: `url('/programmes/bg-home.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
       <div className="relative z-10 flex flex-col items-center h-full">
         {/* Header */}
         <header className="w-full text-center pt-16">
-          <Image src="//programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
+          <Image src="/programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
         </header>
 
         {/* Main Content - Centered */}
@@ -219,7 +219,7 @@ export default function Home() {
 
               <div className="text-center py-8 px-4">
                 <h1 className="text-3xl md:text-4xl font-bold text-[#002A38] uppercase">
-                  Conférence sur l’innovation en aquaculture
+                  Side Event
                 </h1>
                 <p className="text-xl md:text-2xl text-[#C4A879] font-medium mt-2">
                   Agadir Du 05 au 08 Février 2025
@@ -268,7 +268,7 @@ export default function Home() {
                 {/* </div> */}
                 <div className="flex-1 overflow-hidden">
                   <iframe
-                    src="//programmes/pdfs/Totem-Programme-P3.pdf"
+                    src="/programmes/pdfs/Totem-Programme-P3.pdf"
                     className="w-full h-full"
                     title="Programme Conference PDF"
                   />
