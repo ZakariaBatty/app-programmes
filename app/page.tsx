@@ -9,21 +9,22 @@ import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { DialogTitle } from "@radix-ui/react-dialog"
 
 const conferenceData: ConferenceData = {
-  sideEvent: [
+  "sideEvent": [
     {
       "date": "05 Février 2025",
       "items": [
         {
-          "time": "10h00 - 14h00",
-          "type": "NETWORKING",
-          "title": "SESSION NETWORKING / B TO B :",
-          "description": "Mise en réseau des acteurs et synergies sectorielles et commerciales"
-        },
-        {
           "time": "14h00 - 16h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
-          "description": "Elevage de la crevette"
+          "description": "Elevage de la crevette",
+          "speakers": [
+            {
+              "name": "Lorenzo M. Juarez",
+              "pdfUrl": "/programmes/speakers/Lorenzo-m-juarez.jpg",
+              "organization": "Banque mondiale"
+            }
+          ]
         },
         {
           "time": "16h00 - 17h00",
@@ -33,29 +34,36 @@ const conferenceData: ConferenceData = {
           "speakers": [
             {
               "name": "Pierre FAILLER",
-              "organization": "BM",
-              "pdfUrl": "/programmes/one.jpg",
-              "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
+              "pdfUrl": "/programmes/speakers/Pierre-FAILLER.jpg",
+              "organization": "Banque mondiale",
+              "title": "Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
               "name": "Mourabit Said",
-              "organization": "BID",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/speakers/Mourabit-Said.jpg",
+              "organization": "Banque Islamique de Développement",
               "title": "La chaine de valeur aquacole, une contribution à la sécurité alimentaire"
             },
             {
               "name": "Siham FELLAHI",
-              "organization": "MEF",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "",
+              "organization": "Ministère de l'Économie et des Finances",
               "title": "Les clusters côtiers, une voie de développement de l'économie Bleue et de l'aquaculture"
             }
           ]
         },
         {
-          "time": "17h00 - 19h00",
+          "time": "17h00 - 18h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
-          "description": "Couvrir les risques opérationnels des fermes aquacoles"
+          "description": "Couvrir les risques opérationnels des fermes aquacoles",
+          "speakers": [
+            {
+              "name": "Mohamed TAHIRI",
+              "pdfUrl": "/programmes/speakers/Mohamed-tAHIRI.jpg",
+              "organization": "Assurances Atlantique Sud"
+            }
+          ]
         }
       ]
     },
@@ -63,16 +71,16 @@ const conferenceData: ConferenceData = {
       "date": "06 Février 2025",
       "items": [
         {
-          "time": "10h00 - 16h00",
+          "time": "10h30 - 15h00",
           "type": "NETWORKING",
-          "title": "CONFÉRENCE AQUACOLE : SESSION NETWORKING / B TO B",
-          "description": "Mise en réseau des acteurs et synergies sectorielles et commerciales"
+          "title": "CONFÉRENCE DU SALON HALIEUTIS",
+          "description": "« L’Aquaculture de Demain : Synergie entre Recherche, Innovation et Développement Durable »"
         },
         {
-          "time": "16h00 - 18h00",
+          "time": "15h30 - 17h30",
           "type": "SIDE_EVENT",
-          "title": "SIDE EVENT :",
-          "description": "FAO – ANDA : Les initiatives conjointes en faveur des professionnels des filières aquacoles"
+          "title": "SIDE EVENT : FAO – ANDA – ANEF",
+          "description": "La coopération au service de l’innovation et de la recherche dans le secteur de la pêche et de l’aquaculture"
         }
       ]
     },
@@ -81,53 +89,84 @@ const conferenceData: ConferenceData = {
       "items": [
         {
           "time": "10h00 - 11h00",
-          "type": "SHOWCASE",
-          "title": "SHOWCASE :",
-          "description": "L'expérience norvégienne en aquaculture, leçons et opportunités pour les producteurs marocains"
+          "type": "MASTER_CLASS",
+          "title": "MASTER CLASS:",
+          "description": "Techniques de la plongée sous-marine pour les opérations aquacoles",
+          "speakers": [
+            {
+              "name": "Taha Mohamed",
+              "pdfUrl": "/programmes/speakers/Taha-Mohamed.jpg",
+              "organization": "Université Ibn Zohr-Agadir"
+            }
+          ]
         },
         {
           "time": "11h00 - 13h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
-          "description": "Elevage de la crevette"
+          "description": "Elevage de la crevette",
+          "speakers": [
+            {
+              "name": "Lorenzo M. Juarez",
+              "pdfUrl": "/programmes/speakers/Lorenzo-m-juarez.jpg",
+              "organization": "Banque mondiale"
+            }
+          ]
         },
         {
           "time": "13h00 - 15h00",
           "type": "SHOWCASE",
           "title": "SHOWCASE :",
-          "description": "",
+          "description": "Aquaculture et innovation, les nouvelles voies pour l’aquaculture",
           "speakers": [
             {
               "name": "Nir Tzohari",
-              "organization": "AQUAMANAGER",
-              "title": "Aquaculture et innovation, les nouvelles voies de l'aquaculture",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "/programmes/speakers/Nir-Tzohari.jpg",
+              "organization": "Aquamanager",
+              "title": "L’intelligence artificielle au service de l’aquaculture"
             },
             {
-              "name": "M. Ralf Klis",
-              "organization": "UMITRON",
-              "title": "L’intelligence artificielle en aquaculture 'Handson session'",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "name": "Ralf Klis",
+              "pdfUrl": "/programmes/speakers/Ralf-Klis.jpg",
+              "organization": "Tonalli Moana",
+              "title": "L’intelligence artificielle en aquaculture ‘Hands-on session’"
             },
             {
-              "name": "SETH COAN",
-              "organization": "BARAKA INDUSTRIE",
-              "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure",
-              "pdfUrl": "/programmes/pdfs/LorenzoMJuarez.pdf",
+              "name": "Seth Coan",
+              "pdfUrl": "/programmes/speakers/Seth-Coan.jpg",
+              "organization": "Baraka Industrie",
+              "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure"
             }
           ]
         },
         {
           "time": "15h00 - 16h00",
-          "type": "MASTER_CLASS",
-          "title": "MASTER CLASS:",
-          "description": "Techniques de la plongée sous marine pour les opérations aquacoles, Université IBN ZOHR d’Agadir"
+          "type": "SHOWCASE",
+          "title": "SHOWCASE :",
+          "description": "Des fjords à l’Atlantique : L’application de l’expertise norvégienne en matière d’aquaculture dans les eaux marocaines",
+          "speakers": [
+            {
+              "name": "H.E. Mr. Larsen Sjur",
+              "pdfUrl": "",
+              "organization": "Ambassadeur de la Norvège au Maroc"
+            },
+            {
+              "name": "Morchid Abdelkadouss",
+              "pdfUrl": "",
+              "organization": "ANDA"
+            },
+            {
+              "name": "Mr. Jan-Helge Dahl",
+              "pdfUrl": "",
+              "organization": "Alta Mar"
+            }
+          ]
         },
         {
-          "time": "17h00 - 18h00",
+          "time": "16h30 - 17h30",
           "type": "ROUNDTABLE",
           "title": "ROUNDTABLE :",
-          "description": "Emergence de l'aquaculture en Afrique, quelles opportunités ?"
+          "description": "Emergence de l’aquaculture en Afrique, quelles opportunités?"
         }
       ]
     },
@@ -138,13 +177,14 @@ const conferenceData: ConferenceData = {
           "time": "10h00 - 12h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
-          "description": "Elevage de la crevette"
-        },
-        {
-          "time": "13h00 - 18h00",
-          "type": "NETWORKING",
-          "title": "SESSION NETWORKING / B TO B :",
-          "description": "Mise en réseau des acteurs et synergies sectorielles et commerciales"
+          "description": "Elevage de la crevette",
+          "speakers": [
+            {
+              "name": "Lorenzo M. Juarez",
+              "pdfUrl": "/programmes/speakers/LorenzoMJuarez.jpg",
+              "organization": "Banque mondiale"
+            }
+          ]
         }
       ]
     }
@@ -161,14 +201,14 @@ export default function Home() {
     <main
       className="min-h-screen bg-cover bg-center  relative overflow-hidden"
       style={{
-        backgroundImage: `url('/programmes/bg-home.jpg')`,
+        backgroundImage: `url('/bg-home.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-blue-900/70" />
       <div className="relative z-10 flex flex-col items-center h-full">
         {/* Header */}
         <header className="w-full text-center pt-16">
-          <Image src="/programmes/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
+          <Image src="/logo-ANDA.svg" alt="ANDA Logo" width={400} height={146} className="mx-auto mb-8" />
         </header>
 
         {/* Main Content - Centered */}
@@ -207,7 +247,7 @@ export default function Home() {
             <div
               className="bg-white/90 rounded-lg p-8 w-full max-w-[1800px] mx-auto  h-full "
               style={{
-                backgroundImage: `url('//programmes/bg.jpg')`,
+                backgroundImage: `url('//bg.jpg')`,
               }}
             >
               <div className="flex justify-between">
@@ -267,7 +307,7 @@ export default function Home() {
                 </Button>
                 {/* </div> */}
                 <Image
-                  src="/programmes/confedence.jpg"
+                  src="/confedence.jpg"
                   alt="test"
                   width={4000}
                   height={3000}

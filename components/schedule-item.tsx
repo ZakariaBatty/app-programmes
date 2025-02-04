@@ -9,17 +9,21 @@ export function ScheduleItem({ item }: { item: ScheduleItemType }) {
       <div className="flex gap-8">
         <span className="text-gray-800 w-32 flex-shrink-0 font-medium">{item.time}</span>
         <div>
-          <h3
-            className={`${item.type === "MASTER_CLASS"
-              ? "text-[#22d3ee]"
-              : item.type === "NETWORKING"
-                ? "text-[#d4a373]"
-                : "text-[#004258]"
-              } font-bold`}
-          >
-            {item.title}
-          </h3>
-          {item.description && <p className="text-gray-800 font-bold mt-1">{item.description}</p>}
+          <div className="flex">
+            <h3
+              className={`${item.type === "MASTER_CLASS"
+                ? "text-[#55bcdb]"
+                : item.type === "NETWORKING"
+                  ? "text-[#be5610]"
+                  : item.type === "SHOWCASE"
+                    ? "text-[#be5610]"
+                    : "text-[#0e3d49]"
+                } font-bold`}
+            >
+              {item.title}
+            </h3>
+            {item.description && <p className="text-gray-800 font-bold ml-2">{item.description}</p>}
+          </div>
           {item.speakers && (
             <ul className="text-gray-800 mt-2 space-y-2">
               {item.speakers.map((speaker, index) => (
