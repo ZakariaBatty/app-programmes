@@ -34,19 +34,19 @@ const conferenceData: ConferenceData = {
             {
               "name": "Pierre FAILLER",
               "organization": "BM",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "Finance Bleue : Quelles nouvelles voies pour le financement des activités de l'aquaculture"
             },
             {
               "name": "Mourabit Said",
               "organization": "BID",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "La chaine de valeur aquacole, une contribution à la sécurité alimentaire"
             },
             {
               "name": "Siham FELLAHI",
               "organization": "MEF",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
               "title": "Les clusters côtiers, une voie de développement de l'économie Bleue et de l'aquaculture"
             }
           ]
@@ -101,19 +101,19 @@ const conferenceData: ConferenceData = {
               "name": "Nir Tzohari",
               "organization": "AQUAMANAGER",
               "title": "Aquaculture et innovation, les nouvelles voies de l'aquaculture",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "M. Ralf Klis",
               "organization": "UMITRON",
               "title": "L’intelligence artificielle en aquaculture 'Handson session'",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
             },
             {
               "name": "SETH COAN",
               "organization": "BARAKA INDUSTRIE",
               "title": "Osmose inverse des eaux saumâtres (BWRO) et solutions intégrées de gestion de la saumure",
-              "pdfUrl": "/pdfs/LorenzoMJuarez.pdf",
+              "pdfUrl": "programmes/pdfs/LorenzoMJuarez.pdf",
             }
           ]
         },
@@ -268,7 +268,7 @@ export default function Home() {
                 {/* </div> */}
                 <div className="flex-1 overflow-hidden">
                   <iframe
-                    src="/pdfs/Totem-Programme-P3.pdf"
+                    src="/programmes/pdfs/Totem-Programme-P3.pdf"
                     className="w-full h-full"
                     title="Programme Conference PDF"
                   />

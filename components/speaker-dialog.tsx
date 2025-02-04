@@ -19,6 +19,14 @@ export function SpeakerDialog({ speaker }: { speaker: Speaker }) {
         </div>
       </div>
     </DialogContent>
+
+    // <DialogContent className="max-w-4xl max-h-[80vh]">
+    //   <DialogHeader>
+    //     <DialogTitle>PDF Viewer</DialogTitle>
+    //   </DialogHeader>
+    //   <iframe src={`${speaker.pdfUrl}#toolbar=0`} className="w-full h-[65vh]" title={`PDF presentation for ${speaker.name}`} />
+    // </DialogContent>
+    // </Dialog>
   )
 }
 
