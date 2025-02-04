@@ -172,7 +172,7 @@ export default function Home() {
         </header>
 
         {/* Main Content - Centered */}
-        <div className="flex-1 flex items-center justify-center w-full px-16">
+        <div className="flex-1 mt-20 flex items-center justify-center w-full px-16">
           {activeView === "none" ? (
             <div className="flex flex-col items-center gap-16">
               <button
