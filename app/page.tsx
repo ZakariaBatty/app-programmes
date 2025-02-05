@@ -140,10 +140,10 @@ const conferenceData: ConferenceData = {
           ]
         },
         {
-          "time": "15h00 - 16h00",
+          "time": "15h30 - 16h30",
           "type": "SHOWCASE",
           "title": "SHOWCASE :",
-          "description": "Des fjords à l’Atlantique : L’application de l’expertise norvégienne en matière d’aquaculture dans les eaux marocaines",
+          "description": "L'expérience norvégienne en aquaculture, leçons et opportunités pour les producteurs marocains",
           "speakers": [
             {
               "name": "H.E. Mr. Larsen Sjur",

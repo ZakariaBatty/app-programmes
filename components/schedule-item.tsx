@@ -1,6 +1,6 @@
 import { SpeakerDialog } from "./speaker-dialog"
 import type { ScheduleItem as ScheduleItemType } from "@/types/schedule"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger } from "@/components/ui/dialog"
 
 export function ScheduleItem({ item }: { item: ScheduleItemType }) {
@@ -32,10 +32,10 @@ export function ScheduleItem({ item }: { item: ScheduleItemType }) {
                   {speaker.pdfUrl ? (
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="link" className="text-[#004258] font-bold p-0 h-auto pl-2">
-                          {speaker.title && <span className="text-gray-800 ">{speaker.title}</span>}
-                          {speaker.name} ({speaker.organization})
-                        </Button>
+                        {speaker.title && <span className="text-gray-800 ">{speaker.title}</span>}
+                        {/* <Button variant="link" className="text-[#004258] font-bold p-0 h-auto pl-2"> */}
+                        {/* {speaker.name} ({speaker.organization}) */}
+                        {/* </Button> */}
                       </DialogTrigger>
                       <SpeakerDialog speaker={speaker} />
                     </Dialog>
