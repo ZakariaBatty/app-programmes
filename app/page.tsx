@@ -17,6 +17,7 @@ const conferenceData: ConferenceData = {
           "time": "14h00 - 16h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
+          "show": true,
           "description": "Elevage de la crevette",
           "speakers": [
             {
@@ -30,6 +31,7 @@ const conferenceData: ConferenceData = {
           "time": "16h00 - 17h00",
           "type": "SIDE_EVENT",
           "title": "SIDE EVENT :",
+          "show": true,
           "description": "Aquaculture et Finance Bleue : Catalyseurs du Développement des chaines de valeurs",
           "speakers": [
             {
@@ -56,6 +58,7 @@ const conferenceData: ConferenceData = {
           "time": "17h00 - 18h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
+          "show": true,
           "description": "Couvrir les risques opérationnels des fermes aquacoles",
           "speakers": [
             {
@@ -74,12 +77,14 @@ const conferenceData: ConferenceData = {
           "time": "10h30 - 15h00",
           "type": "NETWORKING",
           "title": "CONFÉRENCE DU SALON HALIEUTIS",
+          "show": true,
           "description": "« L’Aquaculture de Demain : Synergie entre Recherche, Innovation et Développement Durable »"
         },
         {
           "time": "15h30 - 17h30",
           "type": "SIDE_EVENT",
           "title": "SIDE EVENT : FAO – ANDA – ANEF",
+          "show": true,
           "description": "La coopération au service de l’innovation et de la recherche dans le secteur de la pêche et de l’aquaculture"
         }
       ]
@@ -91,6 +96,7 @@ const conferenceData: ConferenceData = {
           "time": "10h00 - 11h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
+          "show": true,
           "description": "Techniques de la plongée sous-marine pour les opérations aquacoles",
           "speakers": [
             {
@@ -104,6 +110,7 @@ const conferenceData: ConferenceData = {
           "time": "11h00 - 13h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
+          "show": true,
           "description": "Elevage de la crevette",
           "speakers": [
             {
@@ -117,6 +124,7 @@ const conferenceData: ConferenceData = {
           "time": "13h00 - 15h00",
           "type": "SHOWCASE",
           "title": "SHOWCASE :",
+          "show": true,
           "description": "Aquaculture et innovation, les nouvelles voies pour l’aquaculture",
           "speakers": [
             {
@@ -143,6 +151,7 @@ const conferenceData: ConferenceData = {
           "time": "15h30 - 16h30",
           "type": "SHOWCASE",
           "title": "SHOWCASE :",
+          "show": false,
           "description": "L'expérience norvégienne en aquaculture, leçons et opportunités pour les producteurs marocains",
           "speakers": [
             {
@@ -166,6 +175,7 @@ const conferenceData: ConferenceData = {
           "time": "16h30 - 17h30",
           "type": "ROUNDTABLE",
           "title": "ROUNDTABLE :",
+          "show": true,
           "description": "Emergence de l’aquaculture en Afrique, quelles opportunités?"
         }
       ]
@@ -177,6 +187,7 @@ const conferenceData: ConferenceData = {
           "time": "10h00 - 12h00",
           "type": "MASTER_CLASS",
           "title": "MASTER CLASS:",
+          "show": true,
           "description": "Elevage de la crevette",
           "speakers": [
             {
