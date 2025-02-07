@@ -159,11 +159,11 @@ const conferenceData: ConferenceData = {
               "pdfUrl": "",
               "organization": "Ambassadeur de la Norvège au Maroc"
             },
-            // {
-            //   "name": "Morchid Abdelkadouss",
-            //   "pdfUrl": "",
-            //   "organization": "ANDA"
-            // },
+            {
+              "name": "Mme Majida MAAROUF",
+              "pdfUrl": "",
+              "organization": "ANDA"
+            },
             {
               "name": "Mr. Jan-Helge Dahl",
               "pdfUrl": "",
