@@ -15,6 +15,7 @@ export interface ScheduleItem {
       | 'ROUNDTABLE';
    title: string;
    description?: string;
+   show?: boolean;
    speakers?: Speaker[];
 }
 
